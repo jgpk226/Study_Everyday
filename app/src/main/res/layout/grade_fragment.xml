@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="내신"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/root"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/schoolGradeButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="성적 입력"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/root"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/setRatioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:text="학년별 비율 설정"
+                    android:textStyle="normal"
+                    android:fontFamily="@font/root"/>
+
+            </LinearLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="3dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:text=""
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:text="등급"
+                        android:textSize="23sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/root"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:text="Z 점수"
+                        android:textSize="23sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/root"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="3dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:text="전 교과"
+                        android:textSize="23sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/root"/>
+
+                    <TextView
+                        android:id="@+id/allGradeText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:text="0.00"
+                        android:textSize="23sp"
+                        android:textStyle="normal"
+                        android:fontFamily="@font/root"/>
+
+                    <TextView
+                        android:id="@+id/allZText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:text="null"
+                        android:textSize="23sp"
+                        android:textStyle="normal"
+                        android:fontFamily="@font/root"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="3dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:text="국영수사"
+                        android:textSize="23sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/root"/>
+
+                    <TextView
+                        android:id="@+id/kGradeText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:text="0.00"
+                        android:textSize="23sp"
+                        android:textStyle="normal"
+                        android:fontFamily="@font/root"/>
+
+                    <TextView
+                        android:id="@+id/kZText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:text="null"
+                        android:textSize="23sp"
+                        android:textStyle="normal"
+                        android:fontFamily="@font/root"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="3dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:text="국영수과"
+                        android:textSize="23sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/root"/>
+
+                    <TextView
+                        android:id="@+id/mGradeText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:text="0.00"
+                        android:textSize="23sp"
+                        android:textStyle="normal"
+                        android:fontFamily="@font/root"/>
+
+                    <TextView
+                        android:id="@+id/mZText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:text="null"
+                        android:textSize="23sp"
+                        android:textStyle="normal"
+                        android:fontFamily="@font/root"/>
+
+                </TableRow>
+            </TableLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="모의고사"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/root"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/nationGradeButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="성적 입력"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/root"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/setSubjectButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:text="과목 설정"
+                    android:textStyle="normal"
+                    android:fontFamily="@font/root"/>
+            </LinearLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp">
+
+                    <TextView
+                        android:id="@+id/TestName1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/root"
+                        android:text="00.00.00"
+                        android:textSize="21sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/SubjectName1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginRight="3dp"
+                        android:text="과목명"
+                        android:textSize="21sp"
+                        android:textStyle="normal"
+                        android:fontFamily="@font/root"/>
+
+                    <TextView
+                        android:id="@+id/Score1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginRight="3dp"
+                        android:text="000점"
+                        android:textSize="21sp"
+                        android:textStyle="normal"
+                        android:fontFamily="@font/root"/>
+
+                    <TextView
+                        android:id="@+id/sScore1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginRight="3dp"
+                        android:text="000점"
+                        android:textSize="21sp"
+                        android:textStyle="normal"
+                        android:fontFamily="@font/root"/>
+
+                    <TextView
+                        android:id="@+id/Percent1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginRight="3dp"
+                        android:text="00.0"
+                        android:textSize="21sp"
+                        android:textStyle="normal"
+                        android:fontFamily="@font/root"/>
+
+                    <TextView
+                        android:id="@+id/Grade1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginRight="3dp"
+                        android:text="0등급"
+                        android:textSize="21sp"
+                        android:textStyle="normal"
+                        android:fontFamily="@font/root"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp">
+
+                    <TextView
+                        android:id="@+id/TestName2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginRight="3dp"
+                        android:textSize="21sp"
+                        android:textStyle="normal"
+                        android:fontFamily="@font/root"/>
+
+                    <TextView
+                        android:id="@+id/SubjectName2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginRight="3dp"
+                        android:textSize="21sp"
+                        android:textStyle="normal"
+                        android:fontFamily="@font/root"/>
+
+                    <TextView
+                        android:id="@+id/Score2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginRight="3dp"
+                        android:textSize="21sp"
+                        android:textStyle="normal"
+                        android:fontFamily="@font/root"/>
+
+                    <TextView
+                        android:id="@+id/sScore2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginRight="3dp"
+                        android:textSize="21sp"
+                        android:textStyle="normal"
+                        android:fontFamily="@font/root"/>
+
+                    <TextView
+                        android:id="@+id/Percent2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginRight="3dp"
+                        android:textSize="21sp"
+                        android:textStyle="normal"
+                        android:fontFamily="@font/root"/>
+
+                    <TextView
+                        android:id="@+id/Grade2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginRight="3dp"
+                        android:textSize="21sp"
+                        android:textStyle="normal"
+                        android:fontFamily="@font/root"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp">
+
+                    <TextView
+                        android:id="@+id/TestName3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginRight="3dp"
+                        android:textSize="21sp"
+                        android:textStyle="normal"
+                        android:fontFamily="@font/root"/>
+
+                    <TextView
+                        android:id="@+id/SubjectName3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginRight="3dp"
+                        android:textSize="21sp"
+                        android:textStyle="normal"
+                        android:fontFamily="@font/root"/>
+
+                    <TextView
+                        android:id="@+id/Score3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:textSize="21sp"
+                        android:textStyle="normal"
+                        android:fontFamily="@font/root"/>
+
+                    <TextView
+                        android:id="@+id/sScore3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginRight="3dp"
+                        android:textSize="21sp"
+                        android:textStyle="normal"
+                        android:fontFamily="@font/root"/>
+
+                    <TextView
+                        android:id="@+id/Percent3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginRight="3dp"
+                        android:textSize="21sp"
+                        android:textStyle="normal"
+                        android:fontFamily="@font/root"/>
+
+                    <TextView
+                        android:id="@+id/Grade3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginRight="3dp"
+                        android:textSize="21sp"
+                        android:textStyle="normal"
+                        android:fontFamily="@font/root"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp">
+
+                    <TextView
+                        android:id="@+id/TestName4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginRight="3dp"
+                        android:textSize="21sp"
+                        android:textStyle="normal"
+                        android:fontFamily="@font/root"/>
+
+                    <TextView
+                        android:id="@+id/SubjectName4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginRight="3dp"
+                        android:textSize="21sp"
+                        android:textStyle="normal"
+                        android:fontFamily="@font/root"/>
+
+                    <TextView
+                        android:id="@+id/Score4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginRight="3dp"
+                        android:textSize="21sp"
+                        android:textStyle="normal"
+                        android:fontFamily="@font/root"/>
+
+                    <TextView
+                        android:id="@+id/sScore4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginRight="3dp"
+                        android:textSize="21sp"
+                        android:textStyle="normal"
+                        android:fontFamily="@font/root"/>
+
+                    <TextView
+                        android:id="@+id/Percent4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginRight="3dp"
+                        android:textSize="21sp"
+                        android:textStyle="normal"
+                        android:fontFamily="@font/root"/>
+
+                    <TextView
+                        android:id="@+id/Grade4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginRight="3dp"
+                        android:textSize="21sp"
+                        android:textStyle="normal"
+                        android:fontFamily="@font/root"/>
+
+                </TableRow>
+
+            </TableLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="\n\n\n" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/root"
+        android:text="목표설정 및 좌우명"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="0dp"
+        android:background="@drawable/timer"
+        android:padding="5dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageView"
+            android:layout_width="100dp"
+            android:layout_height="110dp"
+            android:src="@drawable/goal"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="3dp"
+                android:fontFamily="@font/handwriting"
+                android:hint="목표는 말할수록 더 가까워집니다."
+                android:inputType="text"
+                android:textSize="23sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editText2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="3dp"
+                android:fontFamily="@font/handwriting"
+                android:hint="나의 좌우명에 따라 살아갑시다."
+                android:inputType="text"
+                android:textSize="23sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_gravity="right"
+        android:text="저장"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        android:fontFamily="@font/root"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <TextView
+            android:id="@+id/typeText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="20dp"
+            android:clickable="true"
+            android:text="신분 선택"
+            android:textSize="30sp"
+            android:textStyle="normal"
+            android:fontFamily="@font/root"/>
+
+        <TextView
+            android:id="@+id/subjectText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="20dp"
+            android:clickable="true"
+            android:text="과목 설정"
+            android:textSize="30sp"
+            android:textStyle="normal"
+            android:fontFamily="@font/root"/>
+
+    </LinearLayout>
+</LinearLayout>

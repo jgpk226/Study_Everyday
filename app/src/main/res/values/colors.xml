@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="black">#000000</color>
+    <color name="myblack">#000000</color>
+    <color name="color_ffffff">#ffffff</color>
+    <color name="color_21a4ff">#21a4ff</color>
+    <color name="transparent">#f21231</color> // 메인 달력 선택 색상
+    <color name="color_000000">#000000</color>
+    <color name="cyan">#00FFFF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="snow">#FFFAFA</color>
+    <color name="skyblue">#5DA4BE</color>
+</resources>

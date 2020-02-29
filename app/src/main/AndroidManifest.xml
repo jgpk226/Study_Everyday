@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.techtown.mystudyplanner2">
+
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="에브리데이"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name="org.techtown.mystudyplanner2.activity.Main.MainActivity"
+            android:windowSoftInputMode="adjustResize"
+            android:label="에브리데이">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="org.techtown.mystudyplanner2.activity.PlannerDataInput.PlannerActivity" />
+        <activity android:name="org.techtown.mystudyplanner2.activity.PlannerDataInput.TimerActivity" />
+        <activity android:name="org.techtown.mystudyplanner2.activity.PlannerDataInput.EnterActivity" />
+        <activity android:name="org.techtown.mystudyplanner2.activity.GradeDataInput.SchoolGradeActivity" />
+        <activity android:name="org.techtown.mystudyplanner2.activity.GradeDataInput.NationGradeActivity" />
+        <activity android:name="org.techtown.mystudyplanner2.activity.DDay.DDayActivity" />
+        <activity android:name="org.techtown.mystudyplanner2.activity.GradeDataInput2.TestGradeActivity" />
+        <activity android:name="org.techtown.mystudyplanner2.activity.Subject.SubjectActivity" />
+    </application>
+
+</manifest>

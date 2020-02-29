@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/newSemester"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:text="학기"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/root"/>
+
+                <TextView
+                    android:id="@+id/newSubjectClassification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:text="과목분류"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/root"/>
+
+                <EditText
+                    android:id="@+id/newSubject"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:hint="과목명"
+                    android:inputType="text"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/root"/>
+
+                <EditText
+                    android:id="@+id/newLearnTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="단위"
+                    android:inputType="numberSigned"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/root"/>
+
+                <EditText
+                    android:id="@+id/newScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="점수"
+                    android:inputType="numberSigned"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/root"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginBottom="20dp">
+
+                <EditText
+                    android:id="@+id/newAccomplishment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="성취도"
+                    android:inputType="textCapCharacters"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/root"/>
+
+                <EditText
+                    android:id="@+id/newGrade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="등급"
+                    android:inputType="numberSigned"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/root"/>
+
+                <EditText
+                    android:id="@+id/newAverage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="평균"
+                    android:inputType="numberDecimal"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/root"/>
+
+                <EditText
+                    android:id="@+id/newDiviation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="표준편차"
+                    android:inputType="numberDecimal"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/root"/>
+
+                <Button
+                    android:id="@+id/saveButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="저장"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/root"/>
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"/>
+
+            <Button
+                android:id="@+id/completeButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="완료"
+                android:textStyle="bold"
+                android:fontFamily="@font/root"/>
+
+            <TextView
+                android:layout_margin="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="평균과 표준편차는 Z점수 계산을 위해 사용되며 \n등급만 알고 싶은 경우에는 0 을 대입하셔도 무관합니다."
+                android:textSize="17sp"
+                android:textStyle="normal"
+                android:fontFamily="@font/root" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

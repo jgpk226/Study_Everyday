@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="과목 : "
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/root"/>
+
+        <TextView
+            android:id="@+id/subject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:clickable="true"
+            android:hint="과목 선택"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            android:fontFamily="@font/root"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="공부 내용 : "
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/root"/>
+
+        <EditText
+            android:id="@+id/contentEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:inputType="text"
+            android:hint="공부 내용을 입력하세요."
+            android:textSize="20sp"
+            android:textStyle="normal"
+            android:fontFamily="@font/root"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="공부 시간 : "
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/root"/>
+
+        <EditText
+            android:id="@+id/hourEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:inputType="numberSigned"
+            android:hint="00"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            android:fontFamily="@font/root"/>
+
+        <EditText
+            android:id="@+id/minEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:inputType="numberSigned"
+            android:hint="00"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            android:fontFamily="@font/root"/>
+
+        <EditText
+            android:id="@+id/secEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:inputType="numberSigned"
+            android:hint="00"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            android:fontFamily="@font/root"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:text="플래너에 기록"
+        android:textStyle="normal"
+        android:fontFamily="@font/root"/>
+
+</LinearLayout>

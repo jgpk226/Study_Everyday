@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="시험 : "
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/root"/>
+
+                    <TextView
+                        android:id="@+id/testName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="7dp"
+                        android:clickable="true"
+                        android:hint="00.00.00."
+                        android:inputType="text"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/root"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+                        android:text="과목분류 : "
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/root"/>
+
+                    <TextView
+                        android:id="@+id/subjectClassification"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="14dp"
+                        android:clickable="true"
+                        android:hint="과목"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/root"/>
+
+                    <EditText
+                        android:id="@+id/subject"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/root"
+                        android:hint="과목명  "
+                        android:inputType="text"
+                        android:textSize="21sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp">
+
+                <EditText
+                    android:id="@+id/originalScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="원점수"
+                    android:inputType="numberSigned"
+                    android:textSize="21sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/root"/>
+
+                <EditText
+                    android:id="@+id/standardScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="표준점수"
+                    android:inputType="numberSigned"
+                    android:textSize="21sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/root"/>
+
+                <EditText
+                    android:id="@+id/grade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="등급"
+                    android:inputType="numberSigned"
+                    android:textSize="21sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/root"/>
+
+                <EditText
+                    android:id="@+id/percentage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="백분위"
+                    android:inputType="numberDecimal"
+                    android:textSize="21sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/root"/>
+
+                <Button
+                    android:id="@+id/saveButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="저장"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/root"/>
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"/>
+
+            <Button
+                android:id="@+id/completeButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="완료"
+                android:textStyle="bold"
+                android:fontFamily="@font/root"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
